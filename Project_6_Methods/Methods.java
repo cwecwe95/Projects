@@ -1,10 +1,13 @@
+import java.time.LocalDate;
+import java.time.DayOfWeek;
+
 public class Methods {
 	//public static int numer=0;						//esempio di variabile globale
 
 	public static void main(String[] args) {			//args sta per arguments
 	System.out.println(4*3);
 	//multiply4by3();											//restituisce 4*3 ma che si perde, perchè non viene utilizzato
-	int number=multiply();
+	int number=multiply4by3();
 	System.out.println(number);
 	squaring();	
 	LocalDate day= LocalDate.now();
@@ -23,8 +26,11 @@ public class Methods {
 	LocalDate today= LocalDate.now();
 	DayOfWeek dayT= today.getDayOfWeek();
 
+	String toReverse="IoPippo";
+	reverseString(toReverse);
+
 	}
-	public static DayOfWeek() 
+	//public static DayOfWeek() 
 
 	public static void findTodayDate() {
 		LocalDate day= LocalDate.now();
@@ -36,11 +42,20 @@ public class Methods {
 		return 4*3;										
 	}
 
-	public void squaring() {
-		int number1=multiply();
-		int number2=multiply();
+	public static void squaring() {
+		int number1=multiply4by3();
+		int number2=multiply4by3();
 		System.out.println(number1*number2);
 
 
+	}
+
+	public static String reverseString(String s1){
+		String s="";
+		int sum=0;
+		for(int i=s1.length()-1; i>=0; i--) {
+			s+=s1.charAt(i);
+		}
+		return s;
 	}
 }
