@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class BinarySearch {
 	public static void main(String[] args) {
-		final int DIM = 100, RAND_RANGE = 40;	//Cambia Dim per cambiare la dimensione dell'array. Cambia RAND_RANGE per modificare la grandezza dei valori
+		final int DIM = 30, RAND_RANGE = 40;	//Cambia Dim per cambiare la dimensione dell'array. Cambia RAND_RANGE per modificare la grandezza dei valori
 		int[] array = new int[DIM];
 		int low = 0, high = array.length - 1, pivot = 0;
 		Random rand = new Random();
