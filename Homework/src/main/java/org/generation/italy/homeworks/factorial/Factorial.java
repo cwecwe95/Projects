@@ -12,17 +12,20 @@ public class Factorial {
 			n= scanner.nextInt();
 			if(n<2){ System.out.println("Scrivere un numero maggiore di 1");}
 		}while(n<2);
-		factorial=n;
-		for(int i=n-1;i>0;i--){
-			factorial*=i;
-		}
-		System.out.printf("Il fattoriale di %d equivale a %d\nm",n,factorial);
+		factorial=iterativeFactorial(n);
+		System.out.printf("Il fattoriale di %d equivale a %d\n",n,factorial);
 		
 		//Versione ricorsiva
 		factorial=recursiveFactorial(n);
 		System.out.printf("\nRICORSIONE\nIl fattoriale di %d equivale a %d\n",n,factorial);
 	}
-	
+	public static int iterativeFactorial (int n){
+		int f=n;
+		for(int i=n-1;i>0;i--){
+			f*=i;
+		}
+		return f;
+	}
 	public static int recursiveFactorial(int n){
 		if (n<2) return 1;
 		return recursiveFactorial(n-1)*n;
